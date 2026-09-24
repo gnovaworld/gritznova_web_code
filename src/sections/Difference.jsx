@@ -1,17 +1,120 @@
-import { ShieldCheck, Workflow, Sparkles, Layers, Eye, Headphones } from "lucide-react";
+import {
+  ShieldCheck,
+  Workflow,
+  Sparkles,
+  Layers,
+  Eye,
+  Headphones,
+} from "lucide-react";
+import { useEffect, useRef } from "react";
 import SectionLabel from "../components/SectionLabel";
-export default function Difference(){
- const points=[
-  [ShieldCheck,"Engineering First","Solutions designed with maintainability, scalability, security, and performance in mind."],
-  [Layers,"Business Focused","Technology decisions connected to real business objectives and measurable outcomes."],
-  [Workflow,"Scalable Architecture","Systems designed to support growth in users, data, traffic, and functionality."],
-  [Sparkles,"AI Ready","Identify practical opportunities to introduce AI and automation without chasing hype."],
-  [Eye,"Transparent Delivery","Clear communication, milestones, and visibility throughout development."],
-  [Headphones,"Long-Term Support","Our relationship continues beyond product launch with responsive technical partnership."]
- ];
- return <section id="about" className="section about"><div><SectionLabel>THE GRITZNOVA DIFFERENCE</SectionLabel>
-  <div className="section-title"><h2>Technology partner for the long run.</h2><p>GRITZNOVA is a Bangalore-based software engineering and technology company focused on building reliable digital products, cloud platforms, AI solutions, and business automation systems.</p></div>
-  <div className="about-points">{points.map(([Icon,title,text])=><div key={title}><Icon/><span><b>{title}</b><small>{text}</small></span></div>)}</div></div>
-  <div className="about-visual"><div className="red-square"/><div className="about-number">8<span>+</span></div><p>Years combined expertise • Indian & international client serving</p></div>
- </section>;
+
+export default function Difference() {
+  const sectionRef = useRef(null);
+
+  const points = [
+    [
+      ShieldCheck,
+      "Engineering First",
+      "Solutions designed with maintainability, scalability, security, and performance in mind.",
+    ],
+    [
+      Layers,
+      "Business Focused",
+      "Technology decisions connected to real business objectives and measurable outcomes.",
+    ],
+    [
+      Workflow,
+      "Scalable Architecture",
+      "Systems designed to support growth in users, data, traffic, and functionality.",
+    ],
+    [
+      Sparkles,
+      "AI Ready",
+      "Identify practical opportunities to introduce AI and automation without chasing hype.",
+    ],
+    [
+      Eye,
+      "Transparent Delivery",
+      "Clear communication, milestones, and visibility throughout development.",
+    ],
+    [
+      Headphones,
+      "Long-Term Support",
+      "Our relationship continues beyond product launch with responsive technical partnership.",
+    ],
+  ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("about-visible");
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section
+      id="about"
+      ref={sectionRef}
+      className="section about about-reveal"
+    >
+      <div className="about-content">
+        <SectionLabel>THE GRITZNOVA DIFFERENCE</SectionLabel>
+
+        <div className="section-title">
+          <h2>Technology partner for the long run.</h2>
+
+          <p>
+            GRITZNOVA is a Bangalore-based software engineering and technology
+            company focused on building reliable digital products, cloud
+            platforms, AI solutions, and business automation systems.
+          </p>
+        </div>
+
+        <div className="about-points">
+          {points.map(([Icon, title, text], index) => (
+            <div
+              key={title}
+              className="about-point"
+              style={{
+                transitionDelay: `${0.15 + index * 0.1}s`,
+              }}
+            >
+              <Icon />
+
+              <span>
+                <b>{title}</b>
+                <small>{text}</small>
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="about-visual">
+        <div className="red-square" />
+
+        <div className="about-number">
+          8<span>+</span>
+        </div>
+
+        <p>
+          Years combined expertise • Indian & international client serving
+        </p>
+      </div>
+    </section>
+  );
 }

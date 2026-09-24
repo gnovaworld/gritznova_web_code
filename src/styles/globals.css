@@ -243,3 +243,26 @@ footer{gap:35px}footer>div:first-child{max-width:330px}footer .logo-brand img{he
 html {
   scroll-behavior: smooth;
 }
+
+
+/* =========================
+   HERO BACKGROUND POINTS
+========================= */
+
+.hero-point {
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease;
+  cursor: pointer;
+}
+
+.hero-point:hover {
+  transform: scale(1.8);
+  background: #e50914;
+  opacity: 1;
+  box-shadow:
+    0 0 8px rgba(229, 9, 20, 0.9),
+    0 0 20px rgba(229, 9, 20, 0.5);
+}
