@@ -1,25 +1,36 @@
-# GRITZNOVA Website
+# GRITZNOVA
 
-React + Vite website for GRITZNOVA.
+GRITZNOVA is a technology company delivering AI, software, cloud, and automation solutions for modern businesses.
 
-## Design
-- Premium black + white layout
-- Red GRITZNOVA accent
-- No cyan/blue/turquoise accents
-- Responsive navigation and sections
+## Website Overview
 
-## Content
-Content is based on the supplied GRITZNOVA reference screenshots, including products, services, technology stack, methodology, company positioning, and contact details.
+The GRITZNOVA website showcases:
 
-## Run
-```bash
-npm install
-npm run dev
-```
+- AI & Machine Learning Solutions
+- Custom Software Development
+- Cloud & DevOps Services
+- Agentic AI Solutions
+- Systems Integration
+- Managed IT Services
+- Technology Stack
+- Products & Platforms
+- Development Methodology
+- Company Positioning
+- Contact & Business Enquiry
 
-## Build
-```bash
-npm run build
-```
+## Tech Stack
 
-The GRITZNOVA logo is included in `src/assets/gritznova-logo.png` and imported directly by the Navbar and Footer.
+- React.js
+- JavaScript
+- Vite
+- Tailwind CSS
+- CSS
+- Lucide React
+
+## Project
+
+This repository contains the frontend source code for the GRITZNOVA corporate website.
+
+## Repository
+
+GitHub: https://github.com/Sawai-Associates-Dev/gritznova-website.git
