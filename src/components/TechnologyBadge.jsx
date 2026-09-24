@@ -1,0 +1,1 @@
+export default function TechnologyBadge({name}){return <span className="tech-pill">{name}</span>;}
