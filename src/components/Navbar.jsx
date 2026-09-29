@@ -29,7 +29,7 @@ export default function Navbar({ scrolled, menuOpen, setMenuOpen, onQuote }) {
             </a>
           ))}
 
-          <button className="nav-cta" onClick={onQuote}>
+          <button className="nav-cta cta-blue" onClick={onQuote}>
             Get a Quote
             <ArrowDownRight
               size={15}

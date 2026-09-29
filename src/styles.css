@@ -704,24 +704,8 @@ textarea{min-height:125px;resize:vertical}.form-submit{margin-top:4px}.form-succ
 }
 
 
-/* =========================================================
-   PRODUCTS
-   ========================================================= */
 
-.product-item {
-  transition:
-    border-color .2s ease,
-    box-shadow .2s ease,
-    transform .2s ease;
-}
 
-.product-item:hover {
-  transform: translateX(2px);
-}
-
-.product-item.selected {
-  box-shadow: inset 3px 0 var(--accent);
-}
 
 
 /* =========================================================
@@ -885,321 +869,511 @@ textarea{min-height:125px;resize:vertical}.form-submit{margin-top:4px}.form-succ
     font-size: 9px;
   }
 }
-/* About Formula - Better Colors on White */
-
-.formula span:nth-of-type(1) {
-  color: #1D4ED8 !important; /* Deep Blue */
+.section-label {
+  color: #fff !important;
 }
 
-.formula span:nth-of-type(2) {
-  color: #334155 !important; /* Charcoal */
+.section-label span {
+  background-color: #fff !important;
 }
 
-.formula span:nth-of-type(3) {
-  color: #6D28D9 !important; /* Deep Violet */
+
+
+.lifecycle .life-step span,
+.lifecycle .life-step b {
+  color: #5b8def !important;
 }
 
-.formula span:nth-of-type(4) {
-  color: #0369A1 !important; /* Deep Sky Blue */
+.lifecycle .life-line {
+  background: #5b8def !important;
 }
 
-.formula b {
-  color: #64748B !important; /* Slate */
+.lifecycle .life-step span {
+  font-size: 14px !important;
+  font-weight: 500 !important;
 }
-/* Industries - Category Colors */
-
-.industry-card:nth-child(1) > span,
-.industry-card:nth-child(1) h3,
-.industry-card:nth-child(1) svg {
-  color: #60A5FA !important;
-}
-
-.industry-card:nth-child(2) > span,
-.industry-card:nth-child(2) h3,
-.industry-card:nth-child(2) svg {
-  color: #34D399 !important;
+.cta-blue {
+  background: #123B7A !important;
+  color: #ffffff !important;
+  border-color: #123B7A !important;
 }
 
-.industry-card:nth-child(3) > span,
-.industry-card:nth-child(3) h3,
-.industry-card:nth-child(3) svg {
-  color: #A78BFA !important;
+.cta-blue:hover {
+  background: #0B2854 !important;
+  border-color: #0B2854 !important;
+  color: #ffffff !important;
 }
 
-.industry-card:nth-child(4) > span,
-.industry-card:nth-child(4) h3,
-.industry-card:nth-child(4) svg {
-  color: #67B7E8 !important;
+.arch-visual .node-label {
+  font-size: 12px !important;
+  font-weight: 600 !important;
 }
 
-/* Keep descriptions neutral */
-.industry-card p {
-  color: #87909B;
+.arch-visual .node-sub {
+  font-size: 10px !important;
+  font-weight: 400 !important;
+}
+
+.visual-metrics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-top: 18px;
+}
+
+.visual-metrics span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.visual-metrics b {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.visual-metrics small {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.visual-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.visual-bottom span {
+  white-space: nowrap;
+}
+
+.visual-bottom span:first-child {
+  color: #123B7A !important;
 }
 
 /* =========================================
-   PROCESS / DELIVERY MODEL COLORS
+   CAPABILITIES / WHAT WE BUILD
    ========================================= */
 
-/* 01 Discover - Blue */
-.process-step:nth-child(1) h3,
-.process-step:nth-child(1) .process-dot span {
-  color: #2563EB !important;
+/* Number + Icon same colour */
+.solution-card .card-top span,
+.solution-card .card-top svg {
+  color: #123B7A !important;
+  stroke: #123B7A !important;
 }
 
-.process-step:nth-child(1) .process-dot span {
-  background: #2563EB !important;
+/* Number */
+.solution-card .card-top span {
+  font-size: 16px !important;
+  font-weight: 500 !important;
 }
 
-/* 02 Plan - Violet */
-.process-step:nth-child(2) h3 {
-  color: #7C3AED !important;
+/* Icon */
+.solution-card .card-top svg {
+  width: 20px !important;
+  height: 20px !important;
 }
 
-.process-step:nth-child(2) .process-dot span {
-  background: #7C3AED !important;
+/* Card heading */
+.solution-card h3 {
+  color: #123B7A !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
 }
 
-/* 03 Design - Cyan Blue */
-.process-step:nth-child(3) h3 {
-  color: #0369A1 !important;
+/* Card description */
+.solution-card p {
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
 }
 
-.process-step:nth-child(3) .process-dot span {
-  background: #0369A1 !important;
+/* Remove arrow */
+.solution-card .card-arrow {
+  display: none !important;
 }
 
-/* 04 Build - Green */
-.process-step:nth-child(4) h3 {
-  color: #059669 !important;
+/* Keep all cards consistent */
+.solution-card-1 .card-top span,
+.solution-card-1 .card-top svg,
+.solution-card-2 .card-top span,
+.solution-card-2 .card-top svg,
+.solution-card-3 .card-top span,
+.solution-card-3 .card-top svg,
+.solution-card-4 .card-top span,
+.solution-card-4 .card-top svg,
+.solution-card-5 .card-top span,
+.solution-card-5 .card-top svg,
+.solution-card-6 .card-top span,
+.solution-card-6 .card-top svg {
+  color: #123B7A !important;
+  stroke: #123B7A !important;
 }
 
-.process-step:nth-child(4) .process-dot span {
-  background: #059669 !important;
+.product-item {
+  --product-color: #123B7A;
 }
 
-/* 05 Test - Orange */
-.process-step:nth-child(5) h3 {
-  color: #D97706 !important;
+/* NovaInsight */
+.product-item.product-novainsight {
+  --product-color: #3B82F6;
 }
 
-.process-step:nth-child(5) .process-dot span {
-  background: #D97706 !important;
+/* NoveInvent */
+.product-item.product-noveinvent {
+  --product-color: #10B981;
 }
 
-/* 06 Deploy - Blue */
-.process-step:nth-child(6) h3 {
-  color: #2563EB !important;
+/* Gritzarv */
+.product-item.product-gritzarv {
+  --product-color: #8B5CF6;
 }
 
-.process-step:nth-child(6) .process-dot span {
-  background: #2563EB !important;
+/* Propgritz */
+.product-item.product-propgritz {
+  --product-color: #F59E0B;
 }
 
-/* 07 Improve - Green */
-.process-step:nth-child(7) h3 {
-  color: #16A34A !important;
+
+/* Product icon */
+.product-item .product-icon {
+  color: var(--product-color) !important;
 }
 
-.process-step:nth-child(7) .process-dot span {
-  background: #16A34A !important;
+.product-item .product-icon svg {
+  stroke: var(--product-color) !important;
 }
 
-/* Keep descriptions neutral */
-.process-step p {
-  color: #69737D !important;
-}
-/* =========================================
-   WHY GRITZNOVA - CARD COLORS
-   ========================================= */
 
-/* 01 Engineering First */
-.why-card:nth-child(1) > span,
-.why-card:nth-child(1) h3 {
-  color: #2563EB !important;
+/* Product number / tag */
+.product-item span {
+  color: var(--product-color);
 }
 
-/* 02 Business Focused */
-.why-card:nth-child(2) > span,
-.why-card:nth-child(2) h3 {
-  color: #475569 !important;
+
+/* Product title */
+.product-item h3 {
+  color: var(--product-color);
 }
 
-/* 03 Scalable Architecture */
-.why-card:nth-child(3) > span,
-.why-card:nth-child(3) h3 {
-  color: #0EA5E9 !important;
+
+/* Arrow */
+.product-item > svg {
+  color: var(--product-color);
+  stroke: var(--product-color);
 }
 
-/* 04 AI Ready */
-.why-card:nth-child(4) > span,
-.why-card:nth-child(4) h3 {
-  color: #7C3AED !important;
+
+/* Selected product */
+.product-item.selected {
+  border-color: var(--product-color) !important;
 }
 
-/* 05 Transparent Delivery */
-.why-card:nth-child(5) > span,
-.why-card:nth-child(5) h3 {
-  color: #0891B2 !important;
+.product-item.selected .product-icon {
+  background: color-mix(
+    in srgb,
+    var(--product-color) 12%,
+    transparent
+  ) !important;
+
+  border-color: var(--product-color) !important;
 }
 
-/* 06 Long-Term Support */
-.why-card:nth-child(6) > span,
-.why-card:nth-child(6) h3 {
-  color: #16A34A !important;
+
+/* Dashboard uses selected product color */
+.dashboard {
+  --product-color: #3B82F6;
 }
 
-/* Keep descriptions neutral */
-.why-card p {
-  color: #9BA3AD !important;
-}
-/* =========================================
-   SERVICES - SOFTWARE ENGINEERING
-   ========================================= */
-
-.service-software .service-icon,
-.service-software + .service-detail .service-icon {
-  color: #2563EB !important;
-  border-color: rgba(37, 99, 235, 0.35) !important;
-  background: rgba(37, 99, 235, 0.06) !important;
+.dashboard .bar {
+  background: var(--product-color) !important;
 }
 
-.service-detail h3 {
-  color: #F5F7FA !important;
+.dashboard .eyebrow,
+.dashboard .dots {
+  color: var(--product-color) !important;
 }
 
-.service-points svg {
-  color: #2563EB !important;
+.dashboard .dash-stats em {
+  color: var(--product-color) !important;
 }
 
-.service-points span {
-  color: #AEB7C0 !important;
+.dashboard .dash-tags strong {
+  color: var(--product-color) !important;
 }
 
-.detail-link {
-  color: #2563EB !important;
+.dashboard .dash-tags span {
+  font-size: 14px !important;
+  font-weight: 400 !important;
 }
 
-.detail-link svg {
-  color: #2563EB !important;
-}
-/* Service points - Green Check */
-.service-points svg {
-  color: #39D98A !important;
-  stroke: #39D98A !important;
+.dashboard .dash-tags span::first-letter {
+  color: #22C55E !important;
+  font-weight: 600 !important;
 }
 
-/* Product Features - Green Checks */
-.product-feature-row svg {
-  color: #39D98A !important;
-  stroke: #39D98A !important;
+.dashboard .dash-tags span strong {
+  color: #22C55E !important;
+}
+
+
+.dashboard .dash-tags span strong {
+  color: #22C55E !important;
+}
+
+.dashboard .dash-tags span strong {
+  color: #22C55E !important;
+}
+
+
+.dashboard .dash-tags span strong {
+  color: #22C55E !important;
+  -webkit-text-fill-color: #22C55E !important;
+  opacity: 1 !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+}
+
+.green-check {
+  color: #22C55E !important;
+  -webkit-text-fill-color: #22C55E !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+}
+
+
+.services .service-card .service-number {
+  color: #123B7A !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+}
+
+.services .service-card h3 {
+  color: #123B7A !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+}
+
+
+/* Services - Normal Size & Blue */
+#services .service-tabs .service-tab .service-number {
+  color: #123B7A !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+#services .service-tabs .service-tab > b {
+  color: #123B7A !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+}
+
+#services .service-tabs .service-tab .service-tab-icon {
+  color: #123B7A !important;
+  stroke: #123B7A !important;
+}
+
+/* Green ticks for all Services */
+#services .service-detail svg {
+  color: #22C55E !important;
+  stroke: #22C55E !important;
+}
+
+.tech-section p {
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+}
+
+p {
+  font-size: 17px !important;
+}
+
+/* From idea to impact - Timeline */
+.lifecycle .life-step span {
+  color: #123B7A !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+.lifecycle .life-step b {
+  color: #123B7A !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+}
+
+/* From idea to impact - Timeline */
+.lifecycle .life-step b {
+  color: #123B7A !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.lifecycle .life-step p {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+
+
+.delivery-model {
+  background: #000000 !important;
+}
+
+/* Arrow hover effect - website wide */
+a svg,
+button svg,
+.icon-link svg,
+.card-arrow svg {
+  transition: color 0.3s ease, stroke 0.3s ease, transform 0.3s ease;
+}
+
+a:hover svg,
+button:hover svg,
+.icon-link:hover svg,
+.card-arrow:hover svg {
+  color: #123B7A !important;
+  stroke: #123B7A !important;
+}
+
+
+/* Text + Arrow hover effect */
+a,
+button {
+  transition: color 0.3s ease;
+}
+
+a:hover,
+button:hover {
+  color: #123B7A !important;
+}
+
+a:hover svg,
+button:hover svg {
+  color: #123B7A !important;
+  stroke: #123B7A !important;
+}
+/* DELIVERY MODEL - Timeline */
+.lifecycle .life-step b {
+  color: #123B7A !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.lifecycle .life-step p {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+
+/* DELIVERY MODEL - FINAL */
+#process .process-step h3 {
+  color: #123B7A !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 1.3 !important;
+}
+
+#process .process-step p {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+
+/* Section labels on white background */
+.section-light .section-label {
+  color: #111827 !important;
+}
+
+.section-light .section-label span {
+  background-color: #111827 !important;
+}
+
+
+/* Talk to Our Team button fix */
+.hero-actions .btn-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  white-space: nowrap !important;
+  width: auto !important;
+  min-width: 180px !important;
+  padding: 12px 18px !important;
+  box-sizing: border-box !important;
+}
+
+.hero-actions .btn-link .circle-arrow {
+  flex-shrink: 0 !important;
+}
+
+/* Remove arrows from Industries cards */
+.industry-card svg,
+.industry-card .icon-link,
+.industry-card .card-arrow {
+  display: none !important;
+}
+
+/* Industries Cards */
+.industry-card > span {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.industry-card svg,
+.industry-card .icon-link,
+.industry-card .card-arrow {
+  display: none !important;
+}
+/* Product Features */
+.product-feature-row {
+  display: flex;
+  gap: 28px;
 }
 
 .product-feature-row span {
-  color: #66717C !important;
-}
-/* NovaInsight - Increasing Graph Green */
-.bar {
-  background: linear-gradient(
-    to top,
-    rgba(57, 217, 138, 0.07),
-    rgba(57, 217, 138, 0.30)
-  ) !important;
-  border-top: 2px solid #39D98A !important;
+  font-size: 14px !important;
+  font-weight: 300 !important;
 }
 
-.trend-line {
-  box-shadow: 0 -8px 0 -7px #39D98A !important;
+.product-feature-row svg {
+  color: #22C55E !important;
+  stroke: #22C55E !important;
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0;
 }
-.hero-tech-label .section-label,
-.hero-tech-label .section-label * {
-  color: #B8BEC8 !important;
-}
-/* Home technology label - grey */
-.hero .section-label {
-  color: #B8BEC8 !important;
-}
-
-.hero .section-label > span {
-  background: #B8BEC8 !important;
+/* Product dashboard - reduce height only */
+.product-preview .dashboard {
+  min-height: 0 !important;
+  height: 420px !important;
 }
 
-/* Service number label */
-.service-detail .section-label {
-  color: #60A5FA !important;
+/* Navbar font size */
+.nav-links a {
+  font-size: 16px !important;
+  font-weight: 400 !important;
 }
 
-.service-detail .section-label > span {
-  background: #60A5FA !important;
+.nav-cta {
+  font-size: 16px !important;
+  font-weight: 400 !important;
 }
-/* Event Stream Active */
-.visual-bottom span:first-child {
-  color: #39D98A !important;
-}
-/* Multi-Region Ready */
-.visual-bottom span:last-child {
-  color: #60A5FA !important;
-}
-/* Footer - White Text on Black Background */
-
-.footer {
-  background: #000000 !important;
-  color: #FFFFFF !important;
-}
-
-.footer h4,
-.footer a,
-.footer span,
-.footer p {
-  color: #FFFFFF !important;
-}
-
-.footer-brand p {
-  color: #E5E7EB !important;
-}
-
-.footer-bottom {
-  color: #FFFFFF !important;
-  border-top-color: #303030 !important;
-}
-
-.footer-bottom span,
-.footer-bottom a {
-  color: #FFFFFF !important;
-}
-
-.socials a {
-  color: #FFFFFF !important;
-  border-color: #444444 !important;
-}
-
-.footer a:hover {
-  color: #E31E24 !important;
-}
-
-
-/* Technology Lifecycle Colors */
-
-.life-step:nth-child(2) b {
-  color: #2563EB !important; /* Discover */
-}
-
-.life-step:nth-child(3) b {
-  color: #7C3AED !important; /* Design */
-}
-
-.life-step:nth-child(4) b {
-  color: #0EA5E9 !important; /* Develop */
-}
-
-.life-step:nth-child(5) b {
-  color: #16A34A !important; /* Deploy */
-}
-
-.life-step:nth-child(6) b {
-  color: #D97706 !important; /* Optimize */
-}
-
-.life-step:nth-child(7) b {
-  color: #475569 !important; /* Support */
+/* Increase website left & right spacing */
+.container {
+  width: 100% !important;
+  max-width: 1280px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
 }

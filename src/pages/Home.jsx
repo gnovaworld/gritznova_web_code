@@ -104,10 +104,13 @@ function Home() {
         if (!/^\+?[0-9()\s.-]+$/.test(clean)) {
           return 'Please enter a valid phone number.';
         }
+
         const digits = clean.replace(/\D/g, '');
+
         if (digits.length < 10 || digits.length > 15) {
           return 'Phone number must contain 10 to 15 digits.';
         }
+
         return '';
       }
 
@@ -132,10 +135,14 @@ function Home() {
 
     fields.forEach((field) => {
       const message = validateField(field, form[field], form);
-      if (message) nextErrors[field] = message;
+
+      if (message) {
+        nextErrors[field] = message;
+      }
     });
 
     setErrors(nextErrors);
+
     return Object.keys(nextErrors).length === 0;
   };
 
@@ -204,6 +211,7 @@ function Home() {
       setErrors({
         form: 'This enquiry has already been submitted. Please change the details before sending it again.'
       });
+
       return;
     }
 
@@ -211,7 +219,6 @@ function Home() {
     setIsSubmitting(true);
 
     try {
-      // Keep the actual email/backend request here when connected.
       await Promise.resolve();
 
       lastSubmittedSignatureRef.current = signature;
@@ -219,6 +226,7 @@ function Home() {
       setErrors({});
     } catch (error) {
       console.error('Submission failed:', error);
+
       setErrors({
         form: 'Something went wrong. Please try again.'
       });
@@ -261,25 +269,23 @@ function Home() {
               </p>
 
               <p className="hero-body">
-                GRITZNOVA helps startups, growing businesses, and enterprises
-                design, develop, modernize, and operate reliable digital
-                products — from custom applications and cloud platforms to
-                AI-powered automation and intelligent agents.
-              </p>
+  GRITZNOVA helps businesses build, modernize, and scale reliable digital products with software, cloud, and AI solutions.
+</p>
 
               <div className="hero-actions">
                 <button
-                  className="btn btn-primary"
+                  className="btn btn-primary cta-blue"
                   onClick={() => go('solutions')}
                 >
                   Explore Our Solutions <ArrowRight size={16} />
                 </button>
 
                 <button
-                  className="btn btn-link"
+                  className="btn btn-link cta-blue"
                   onClick={() => go('contact')}
                 >
                   Talk to Our Team
+
                   <span className="circle-arrow">
                     <IconLink />
                   </span>
@@ -323,6 +329,7 @@ function Home() {
             <div className="intro-head reveal">
               <div>
                 <SectionLabel>A COMPLETE TECHNOLOGY LIFECYCLE</SectionLabel>
+
                 <h2>
                   Technology built around
                   <br />
@@ -373,7 +380,10 @@ function Home() {
           </div>
         </section>
 
-        <section id="solutions" className="solutions section-dark section-padding">
+        <section
+          id="solutions"
+          className="solutions section-dark section-padding"
+        >
           <div className="container">
             <div className="section-heading reveal">
               <div>
@@ -410,7 +420,10 @@ function Home() {
           </div>
         </section>
 
-        <section id="products" className="products section-light section-padding">
+        <section
+          id="products"
+          className="products section-light section-padding"
+        >
           <div className="container">
             <div className="section-heading reveal">
               <div>
@@ -452,18 +465,20 @@ function Home() {
                 ))}
               </div>
 
-              <div className="product-preview">
-                <DashboardVisual />
-              </div>
+             <div className="product-preview">
+  <DashboardVisual product={activeProduct} />
+</div>
             </div>
 
             <div className="product-feature-row">
               <span>
                 <Check /> Real-time dashboards
               </span>
+
               <span>
                 <Check /> Enterprise-grade security
               </span>
+
               <span>
                 <Check /> Open APIs & integrations
               </span>
@@ -471,11 +486,15 @@ function Home() {
           </div>
         </section>
 
-        <section id="services" className="services section-dark section-padding">
+        <section
+          id="services"
+          className="services section-dark section-padding"
+        >
           <div className="container">
             <div className="section-heading reveal">
               <div>
                 <SectionLabel>HOW WE HELP</SectionLabel>
+
                 <h2>
                   Engineering from idea to
                   <br />
@@ -499,10 +518,16 @@ function Home() {
                     key={s.id}
                     onClick={() => setActiveService(s)}
                   >
-                    <span>{s.number}</span>
-                    <s.icon size={17} />
+                    <span className="service-number">
+                      {s.number}
+                    </span>
+
+                    <s.icon
+                      className="service-tab-icon"
+                      size={18}
+                    />
+
                     <b>{s.title}</b>
-                    <ArrowRight size={16} />
                   </button>
                 ))}
               </div>
@@ -511,6 +536,7 @@ function Home() {
                 <div className="service-icon">
                   {(() => {
                     const ServiceIcon = activeService.icon;
+
                     return <ServiceIcon size={20} />;
                   })()}
                 </div>
@@ -520,6 +546,7 @@ function Home() {
                 </SectionLabel>
 
                 <h3>{activeService.title}</h3>
+
                 <p>{activeService.text}</p>
 
                 <div className="service-points">
@@ -539,11 +566,15 @@ function Home() {
           </div>
         </section>
 
-        <section id="technology" className="technology section-light section-padding">
+        <section
+          id="technology"
+          className="technology section-light section-padding"
+        >
           <div className="container">
             <div className="section-heading reveal">
               <div>
                 <SectionLabel>ENGINEERING STACK</SectionLabel>
+
                 <h2>
                   Modern technology.
                   <br />
@@ -579,11 +610,13 @@ function Home() {
                         <span className="tech-category">
                           0{i + 1} / TECHNOLOGY
                         </span>
+
                         <h3>{title}</h3>
                       </div>
 
                       <span className="tech-count">
-                        {items.length} {items.length === 1 ? 'tool' : 'tools'}
+                        {items.length}{' '}
+                        {items.length === 1 ? 'tool' : 'tools'}
                       </span>
                     </div>
 
@@ -602,11 +635,15 @@ function Home() {
           </div>
         </section>
 
-        <section id="about" className="why section-dark section-padding">
+        <section
+          id="about"
+          className="why section-dark section-padding"
+        >
           <div className="container">
             <div className="section-heading reveal">
               <div>
                 <SectionLabel>WHY GRITZNOVA</SectionLabel>
+
                 <h2>
                   Technology partner
                   <br />
@@ -648,7 +685,10 @@ function Home() {
                   'Our relationship continues beyond product launch.'
                 ]
               ].map(([t, d], i) => (
-                <article className="why-card reveal" key={t}>
+                <article
+                  className="why-card reveal"
+                  key={t}
+                >
                   <span>0{i + 1}</span>
                   <h3>{t}</h3>
                   <p>{d}</p>
@@ -658,7 +698,10 @@ function Home() {
           </div>
         </section>
 
-        <section id="process" className="process section-light section-padding">
+        <section
+          id="process"
+          className="process section-light section-padding"
+        >
           <div className="container">
             <div className="section-heading reveal">
               <div>
@@ -674,7 +717,10 @@ function Home() {
 
             <div className="process-timeline">
               {processSteps.map(([num, title, text], i) => (
-                <div className="process-step reveal" key={num}>
+                <div
+                  className="process-step reveal"
+                  key={num}
+                >
                   <div className="process-dot">
                     <span>{num}</span>
                   </div>
@@ -698,6 +744,7 @@ function Home() {
             <div className="section-heading reveal">
               <div>
                 <SectionLabel>WHO WE WORK WITH</SectionLabel>
+
                 <h2>
                   Built for businesses
                   <br />
@@ -708,7 +755,10 @@ function Home() {
 
             <div className="industry-grid">
               {industries.map(([t, d], i) => (
-                <article className="industry-card reveal" key={t}>
+                <article
+                  className="industry-card reveal"
+                  key={t}
+                >
                   <span>0{i + 1}</span>
                   <h3>{t}</h3>
                   <p>{d}</p>
@@ -724,7 +774,11 @@ function Home() {
             <div className="security-wrap reveal">
               <div className="security-copy">
                 <SectionLabel>SECURITY BY DESIGN</SectionLabel>
-                <h2>Security built into the engineering process</h2>
+
+                <h2>
+                  Security built into the engineering process
+                </h2>
+
                 <p>
                   Security is not an afterthought. Solutions can incorporate
                   secure architecture, access control, API security, data
@@ -750,7 +804,9 @@ function Home() {
             <div className="company-copy">
               <SectionLabel>ABOUT GRITZNOVA</SectionLabel>
 
-              <h2>Engineers building technology that matters</h2>
+              <h2>
+                Engineers building technology that matters
+              </h2>
 
               <p>
                 GRITZNOVA is a Bangalore-based software engineering and
@@ -841,14 +897,14 @@ ship(system);`}</pre>
 
             <div className="cta-actions">
               <button
-                className="btn btn-primary"
+                className="btn btn-primary cta-blue"
                 onClick={() => go('contact')}
               >
                 Start a Conversation <ArrowRight size={16} />
               </button>
 
               <button
-                className="btn btn-outline"
+                className="btn btn-outline cta-blue"
                 onClick={() => go('services')}
               >
                 Explore Our Services
@@ -879,6 +935,7 @@ ship(system);`}</pre>
               <div className="contact-info">
                 <a href="mailto:connect@gritznova.com">
                   <Mail />
+
                   <span>
                     <small>Email</small>
                     connect@gritznova.com
@@ -887,6 +944,7 @@ ship(system);`}</pre>
 
                 <a href="tel:+917559660623">
                   <Phone />
+
                   <span>
                     <small>Phone</small>
                     +91 7559660623
@@ -895,6 +953,7 @@ ship(system);`}</pre>
 
                 <div>
                   <MapPin />
+
                   <span>
                     <small>Address</small>
                     Prestige Tech Platina, Kadabisanahalli,
@@ -905,6 +964,7 @@ ship(system);`}</pre>
 
                 <div className="contact-note">
                   <Zap size={18} />
+
                   <p>
                     For project enquiries, include your goals, timeline, and
                     the technology challenge you want to solve.
@@ -924,17 +984,22 @@ ship(system);`}</pre>
                       <Check size={26} />
                     </div>
 
-                    <h3>Thanks — your enquiry has been submitted successfully.</h3>
+                    <h3>
+                      Thanks — your enquiry has been submitted successfully.
+                    </h3>
 
                     {errors.form && (
-                      <div className="form-error-banner" role="alert">
+                      <div
+                        className="form-error-banner"
+                        role="alert"
+                      >
                         {errors.form}
                       </div>
                     )}
 
                     <button
                       type="button"
-                      className="btn btn-primary"
+                      className="btn btn-primary cta-blue"
                       onClick={resetForm}
                     >
                       Send another enquiry
@@ -958,7 +1023,9 @@ ship(system);`}</pre>
                           autoComplete="name"
                           aria-invalid={Boolean(errors.name)}
                           aria-describedby={
-                            errors.name ? 'name-error' : undefined
+                            errors.name
+                              ? 'name-error'
+                              : undefined
                           }
                         />
 
@@ -988,7 +1055,9 @@ ship(system);`}</pre>
                           autoComplete="email"
                           aria-invalid={Boolean(errors.email)}
                           aria-describedby={
-                            errors.email ? 'email-error' : undefined
+                            errors.email
+                              ? 'email-error'
+                              : undefined
                           }
                         />
 
@@ -1017,7 +1086,9 @@ ship(system);`}</pre>
                           autoComplete="organization"
                           aria-invalid={Boolean(errors.company)}
                           aria-describedby={
-                            errors.company ? 'company-error' : undefined
+                            errors.company
+                              ? 'company-error'
+                              : undefined
                           }
                         />
 
@@ -1046,7 +1117,9 @@ ship(system);`}</pre>
                           autoComplete="tel"
                           aria-invalid={Boolean(errors.phone)}
                           aria-describedby={
-                            errors.phone ? 'phone-error' : undefined
+                            errors.phone
+                              ? 'phone-error'
+                              : undefined
                           }
                         />
 
@@ -1075,10 +1148,15 @@ ship(system);`}</pre>
                           required
                           aria-invalid={Boolean(errors.need)}
                           aria-describedby={
-                            errors.need ? 'need-error' : undefined
+                            errors.need
+                              ? 'need-error'
+                              : undefined
                           }
                         >
-                          <option value="">Select a service</option>
+                          <option value="">
+                            Select a service
+                          </option>
+
                           <option>Custom software</option>
                           <option>AI / Generative AI</option>
                           <option>Agentic AI</option>
@@ -1106,7 +1184,10 @@ ship(system);`}</pre>
                             updateField('budget', e.target.value)
                           }
                         >
-                          <option value="">Select range</option>
+                          <option value="">
+                            Select range
+                          </option>
+
                           <option>Under ₹5L</option>
                           <option>₹5L – ₹15L</option>
                           <option>₹15L – ₹30L</option>
@@ -1130,7 +1211,9 @@ ship(system);`}</pre>
                         placeholder="Tell us about your project, goals, and timeline..."
                         aria-invalid={Boolean(errors.message)}
                         aria-describedby={
-                          errors.message ? 'message-error' : undefined
+                          errors.message
+                            ? 'message-error'
+                            : undefined
                         }
                       />
 
@@ -1145,18 +1228,24 @@ ship(system);`}</pre>
                     </label>
 
                     {errors.form && (
-                      <div className="form-error-banner" role="alert">
+                      <div
+                        className="form-error-banner"
+                        role="alert"
+                      >
                         {errors.form}
                       </div>
                     )}
 
                     <button
-                      className="btn btn-primary form-submit"
+                      className="btn btn-primary form-submit cta-blue"
                       type="submit"
                       disabled={isSubmitting}
                       aria-busy={isSubmitting}
                     >
-                      {isSubmitting ? 'Submitting…' : 'Send Inquiry'}
+                      {isSubmitting
+                        ? 'Submitting…'
+                        : 'Send Inquiry'}
+
                       {!isSubmitting && <Send size={16} />}
                     </button>
                   </>
