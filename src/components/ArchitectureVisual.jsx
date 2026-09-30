@@ -58,12 +58,12 @@ export default function ArchitectureVisual() {
             key={n.label}
             transform={`translate(${n.x},${n.y})`}
           >
-            <rect
-              width="120"
-              height="62"
-              rx="4"
-              className="node-box"
-            />
+        <rect
+  width={n.label === 'INTELLIGENCE' ? '145' : '120'}
+  height={n.label === 'INTELLIGENCE' ? '72' : '62'}
+  rx="4"
+  className="node-box"
+/>
 
             <circle
               cx="13"

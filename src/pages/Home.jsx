@@ -446,31 +446,44 @@ function Home() {
 
             <div className="product-layout reveal">
               <div className="product-list">
-                {products.map((p) => (
-                  <button
-                    className={`product-item product-${p.id} ${
-                      activeProduct.id === p.id ? 'selected' : ''
-                    }`}
-                    key={p.id}
-                    onClick={() => setActiveProduct(p)}
-                  >
-                    <div className="product-icon">
-                      {(() => {
-                        const ProductIcon = p.icon;
-                        return <ProductIcon size={18} />;
-                      })()}
-                    </div>
+  {products.map((p) => (
+    <div
+      className={`product-mobile-card ${
+        activeProduct.id === p.id ? 'selected' : ''
+      }`}
+      key={p.id}
+    >
+      <button
+        className={`product-item product-${p.id} ${
+          activeProduct.id === p.id ? 'selected' : ''
+        }`}
+        onClick={() => setActiveProduct(p)}
+      >
+        <div className="product-icon">
+          {(() => {
+            const ProductIcon = p.icon;
+            return <ProductIcon size={18} />;
+          })()}
+        </div>
 
-                    <div>
-                      <span>{p.tag}</span>
-                      <h3>{p.title}</h3>
-                      <p>{p.text}</p>
-                    </div>
+        <div>
+          <span>{p.tag}</span>
+          <h3>{p.title}</h3>
+          <p>{p.text}</p>
+        </div>
 
-                    <ArrowRight size={16} />
-                  </button>
-                ))}
-              </div>
+        <ArrowRight size={16} />
+      </button>
+
+      {/* MOBILE ONLY: selected product image */}
+      {activeProduct.id === p.id && (
+        <div className="mobile-product-image">
+          <DashboardVisual product={p} />
+        </div>
+      )}
+    </div>
+  ))}
+</div>
 
              <div className="product-preview">
   <DashboardVisual product={activeProduct} />
@@ -1043,38 +1056,31 @@ ship(system);`}</pre>
                           </span>
                         )}
                       </label>
+                        <label>
+  Phone Number
+  <span className="required-mark">*</span>
 
-                      <label>
-                        Phone Number
-
-                        <input
-                          type="tel"
-                          inputMode="tel"
-                          maxLength={17}
-                          value={form.phone}
-                          onChange={(e) =>
-                            updateField('phone', e.target.value)
-                          }
-                          onBlur={() => blurField('phone')}
-                          placeholder="+91"
-                          autoComplete="tel"
-                          aria-invalid={Boolean(errors.phone)}
-                          aria-describedby={
-                            errors.phone
-                              ? 'phone-error'
-                              : undefined
-                          }
-                        />
-
-                        {errors.phone && (
-                          <span
-                            id="phone-error"
-                            className="field-error"
-                          >
-                            {errors.phone}
-                          </span>
-                        )}
-                      </label>
+  <input
+    type="tel"
+    inputMode="tel"
+    maxLength={17}
+    value={form.phone}
+    onChange={(e) =>
+      updateField('phone', e.target.value)
+    }
+    onBlur={() => blurField('phone')}
+    required
+    placeholder="+91"
+    autoComplete="tel"
+    aria-invalid={Boolean(errors.phone)}
+    aria-describedby={
+      errors.phone
+        ? 'phone-error'
+        : undefined
+    }
+  />
+</label>
+                     
                     </div>
 
                     <div className="form-row">

@@ -1965,3 +1965,614 @@ html {
   object-fit: contain !important;
   object-position: center;
 }
+
+.product-item.product-novainvent.selected {
+  border-color: #22c55e !important;
+  box-shadow: none !important;
+}
+
+
+/* =========================================
+   PRODUCTS - MOBILE ONLY
+   ========================================= */
+
+.product-mobile-card {
+  width: 100%;
+}
+
+/* Hide mobile image by default */
+.mobile-product-image {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .product-list {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    align-items: start !important;
+  }
+
+  .product-mobile-card {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .product-mobile-card .product-item {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+  }
+
+  /* Selected product image */
+  .product-mobile-card.selected .mobile-product-image {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 8px !important;
+  }
+
+  .mobile-product-image .product-image-preview {
+    width: 100% !important;
+    height: 120px !important;
+    min-height: 120px !important;
+    overflow: hidden !important;
+    border-radius: 5px !important;
+  }
+
+  .mobile-product-image .product-image-preview img {
+    width: 100% !important;
+    height: 120px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  /* Hide the separate large preview on mobile */
+  .product-preview {
+    display: none !important;
+  }
+}
+
+/* Desktop - don't show mobile image */
+@media (min-width: 769px) {
+  .mobile-product-image {
+    display: none !important;
+  }
+}
+/* =========================================
+   FOOTER - MOBILE 2 x 2 LAYOUT ONLY
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .footer-main {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 30px 24px !important;
+    align-items: start !important;
+  }
+
+  /* Keep logo/brand full width */
+  .footer-brand {
+    grid-column: 1 / -1 !important;
+  }
+
+  .footer-main > div:not(.footer-brand) {
+    width: 100% !important;
+    min-width: 0 !important;
+    gap: 10px !important;
+  }
+
+  .footer-main > div:not(.footer-brand) h4 {
+    margin-bottom: 10px !important;
+  }
+
+  .footer-main > div:not(.footer-brand) a,
+  .footer-main > div:not(.footer-brand) span {
+    line-height: 1.5 !important;
+    word-break: break-word !important;
+  }
+
+  .footer-bottom {
+    margin-top: 30px !important;
+    gap: 10px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Footer normal text */
+  .footer-main > div:not(.footer-brand) a,
+  .footer-main > div:not(.footer-brand) span {
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+    color: #ffffff !important;
+  }
+
+  /* Footer headings */
+  .footer-main > div:not(.footer-brand) h4 {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 12px !important;
+    color: #ffffff !important;
+  }
+
+  /* Brand description */
+  .footer-brand p {
+    font-size: 11px !important;
+    line-height: 1.6 !important;
+    color: #ffffff !important;
+  }
+
+  /* Social buttons */
+  .socials a {
+    font-size: 10px !important;
+  }
+
+  /* Bottom footer text */
+  .footer-bottom,
+  .footer-bottom span {
+    font-size: 10px !important;
+    line-height: 1.6 !important;
+    color: #ffffff !important;
+  }
+}
+.socials a {
+  display: grid !important;
+  place-items: center !important;
+}
+
+.socials a svg {
+  width: 15px !important;
+  height: 15px !important;
+  stroke-width: 1.8 !important;
+}
+
+.socials a:nth-child(1) svg {
+  color: #0A66C2 !important;
+  fill: #0A66C2 !important;
+}
+
+.socials a:nth-child(2) svg {
+  color: #DD2A7B !important;
+}
+
+.socials a:nth-child(3) svg {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+}
+
+/* Social Media */
+.social-heading {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  margin: 18px 0 12px !important;
+  letter-spacing: 0.04em !important;
+}
+
+.socials {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+}
+
+.socials a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  width: auto !important;
+  height: auto !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+}
+
+.socials a svg {
+  width: 20px !important;
+  height: 20px !important;
+  flex-shrink: 0 !important;
+}
+
+.socials a:nth-child(1) svg {
+  fill: #0A66C2 !important;
+}
+
+.socials a:nth-child(2) svg {
+  fill: none !important;
+}
+
+.socials a:nth-child(3) svg {
+  fill: #ffffff !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .social-heading {
+    font-size: 12px !important;
+    margin: 20px 0 13px !important;
+  }
+
+  .socials {
+    gap: 13px !important;
+  }
+
+  .socials a {
+    font-size: 12px !important;
+    gap: 7px !important;
+  }
+
+  .socials a svg {
+    width: 21px !important;
+    height: 21px !important;
+  }
+}
+
+
+/* SERVICES NUMBERS - ALWAYS RED */
+.service-number,
+.service-tab .service-number,
+.service-tab:hover .service-number,
+.service-tab:focus .service-number,
+.service-tab:active .service-number,
+.service-tab.active .service-number,
+.service-tab.active:hover .service-number,
+.service-tab.active:focus .service-number {
+  color: #ef4444 !important;
+  -webkit-text-fill-color: #ef4444 !important;
+  transition: none !important;
+}
+
+/* LIFECYCLE MOBILE - SQUARE + NUMBER + CONTENT */
+
+@media (max-width: 720px) {
+
+  .lifecycle {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 22px 18px !important;
+  }
+
+  .lifecycle .life-step {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding-top: 0 !important;
+    position: relative !important;
+  }
+
+  /* Existing small square */
+  .lifecycle .life-step::before {
+    position: static !important;
+    display: block !important;
+    width: 5px !important;
+    height: 5px !important;
+    min-width: 5px !important;
+    margin: 0 !important;
+    background: #ef4444 !important;
+  }
+
+  /* Number */
+  .lifecycle .life-step > span {
+    display: block !important;
+    min-width: 24px !important;
+    margin: 0 !important;
+    color: #ef4444 !important;
+    font-size: 12px !important;
+    line-height: 1 !important;
+  }
+
+  /* Discover / Design / etc. */
+  .lifecycle .life-step > b {
+    display: block !important;
+    margin: 0 !important;
+    color: #111111 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+  }
+
+}
+
+/* WHO WE WORK WITH CARDS - NORMAL HOVER ONLY */
+.industry-card {
+  transition: background 0.3s ease, border-color 0.3s ease !important;
+}
+
+.industry-card:hover {
+  background: #13161b !important;
+  border-color: #41464e !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.security-copy h2 {
+  font-size: clamp(40px, 4.4vw, 62px) !important;
+  line-height: 0.99 !important;
+  letter-spacing: -0.06em !important;
+  font-weight: 800 !important;
+}
+
+/* Footer text size increase */
+.footer-main a,
+.footer-main span {
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+}
+
+.footer-main h4 {
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+}
+
+.footer-brand p {
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+}
+
+.footer-bottom,
+.footer-bottom span {
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+}
+
+.social-heading {
+  font-size: 14px !important;
+}
+
+.socials a {
+  font-size: 14px !important;
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+/* =================================
+   MOBILE PRODUCTS - OVERFLOW FIX
+================================= */
+
+@media (max-width: 768px) {
+
+  .product-list {
+    width: 100% !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+
+  .product-mobile-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .product-mobile-card .product-item {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding: 16px 12px !important;
+
+    display: grid !important;
+    grid-template-columns: 32px minmax(0, 1fr) 16px !important;
+    gap: 8px !important;
+
+    overflow: hidden !important;
+  }
+
+  .product-mobile-card .product-item > div {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .product-mobile-card .product-item h3 {
+    font-size: 20px !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
+
+  .product-mobile-card .product-item p {
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
+
+  .product-mobile-card .product-item span {
+    font-size: 10px !important;
+    line-height: 1.5 !important;
+
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .product-mobile-card .product-icon {
+    width: 32px !important;
+    height: 32px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .product-mobile-card .product-item > svg {
+    width: 14px !important;
+    height: 14px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .mobile-product-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+}
+
+/* =========================================
+   FINAL MOBILE PRODUCT CARD ALIGNMENT
+========================================= */
+
+@media (max-width: 768px) {
+
+  .product-mobile-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .product-mobile-card .product-item {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+
+    padding: 18px 16px !important;
+    box-sizing: border-box !important;
+
+    overflow: hidden !important;
+  }
+
+  /* Icon */
+  .product-mobile-card .product-icon {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* Product content gets FULL card width */
+  .product-mobile-card .product-item > div:nth-child(2) {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Tag */
+  .product-mobile-card .product-item span {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    font-size: 9px !important;
+    line-height: 1.7 !important;
+    letter-spacing: .12em !important;
+
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+  }
+
+  /* Product title */
+  .product-mobile-card .product-item h3 {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 8px 0 10px !important;
+
+    font-size: 21px !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+  }
+
+  /* Description */
+  .product-mobile-card .product-item p {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+
+    font-size: 13px !important;
+    line-height: 1.7 !important;
+
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+  }
+
+  /* Arrow stays inside top-right */
+  .product-mobile-card .product-item > svg {
+    position: absolute !important;
+    top: 20px !important;
+    right: 14px !important;
+
+    width: 16px !important;
+    height: 16px !important;
+
+    margin: 0 !important;
+  }
+
+  /* Selected image */
+  .product-mobile-card.selected .mobile-product-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .product-mobile-card .product-item {
+    padding: 15px 13px !important;
+  }
+
+  .product-mobile-card .product-icon {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+  }
+
+  .product-mobile-card .product-item h3 {
+    font-size: 19px !important;
+  }
+
+  .product-mobile-card .product-item p {
+    font-size: 12px !important;
+    line-height: 1.65 !important;
+  }
+}
+
+/* NovaInvent - Green */
+.product-item.product-novainvent .product-icon,
+.product-item.product-novainvent span {
+  color: #22c55e !important;
+}
+
+.product-item.product-novainvent .product-icon,
+.product-item.product-novainvent .product-icon svg {
+  color: #22c55e !important;
+  stroke: #22c55e !important;
+}
