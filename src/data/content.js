@@ -86,11 +86,11 @@ export const products = [
   },
 
   {
-    id: 'noveinvent',
+    id: 'novainvent',
     icon: Boxes,
     color: '#10B981',
     tag: 'SMART INVENTORY MANAGEMENT',
-    title: 'NoveInvent',
+    title: 'NovaInvent',
     text: 'A real-time inventory management platform for tracking products, stock levels, operational activity, and updates wherever teams work.',
     features: [
       'Inventory tracking',

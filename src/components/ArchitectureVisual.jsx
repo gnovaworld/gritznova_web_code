@@ -2,10 +2,11 @@ import React from 'react';
 
 export default function ArchitectureVisual() {
   const nodes = [
-    { x: 15, y: 62, label: 'CLIENT', sub: 'Web / Mobile' },
-    { x: 102, y: 225, label: 'INTELLIGENCE', sub: 'AI Orchestration' },
-    { x: 260, y: 62, label: 'PLATFORM', sub: 'Cloud Services' },
-    { x: 265, y: 235, label: 'DATA LAYER', sub: 'Secure & Scalable' }
+    { x: 8  , y: 18, label: 'CLIENT', sub: 'Web / Mobile' },
+      { x: 237 , y: 18, label: 'PLATFORM', sub: 'Cloud Services' },
+      { x: 8, y: 220, label: 'INTELLIGENCE', sub: 'AI Orchestration' },
+
+      { x: 237, y: 220, label: 'DATA LAYER', sub: 'Secure & Scalable' }
   ];
 
   return (
@@ -31,21 +32,20 @@ export default function ArchitectureVisual() {
           </filter>
         </defs>
 
-        {/* Main architecture connections */}
-        <path
-          d="
-            M67 90
-            L190 180
-            L312 90
+      <path
+  d="
+    M68 80
+    L190 180
+    L297 80
 
-            M190 180
-            L164 225
+    M190 180
+    L68 251
 
-            M190 180
-            L320 235
-          "
-          className="arch-line"
-        />
+    M190 180
+    L297 251
+  "
+  className="arch-line"
+/>
 
         <path
           d="M67 90 L190 180 L312 90"

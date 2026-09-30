@@ -1164,23 +1164,7 @@ textarea{min-height:125px;resize:vertical}.form-submit{margin-top:4px}.form-succ
 }
 
 
-/* Services - Normal Size & Blue */
-#services .service-tabs .service-tab .service-number {
-  color: #123B7A !important;
-  font-size: 16px !important;
-  font-weight: 400 !important;
-}
 
-#services .service-tabs .service-tab > b {
-  color: #123B7A !important;
-  font-size: 17px !important;
-  font-weight: 400 !important;
-}
-
-#services .service-tabs .service-tab .service-tab-icon {
-  color: #123B7A !important;
-  stroke: #123B7A !important;
-}
 
 /* Green ticks for all Services */
 #services .service-detail svg {
@@ -1376,4 +1360,608 @@ button:hover svg {
   margin-right: auto !important;
   padding-left: 40px !important;
   padding-right: 40px !important;
+}
+
+
+nav a {
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+
+/* Light Blue Buttons */
+button,
+.btn,
+.cta-button,
+.primary-button {
+  background: #8fd3ff !important;
+  background-color: #8fd3ff !important;
+  color: #07111f !important;
+  border-color: #8fd3ff !important;
+}
+
+button:hover,
+.btn:hover,
+.cta-button:hover,
+.primary-button:hover {
+  background: #b5e3ff !important;
+  background-color: #b5e3ff !important;
+  color: #07111f !important;
+  border-color: #b5e3ff !important;
+}
+
+/* Navbar - Get a Quote */
+.nav-cta.cta-blue {
+  background: #8fd3ff !important;
+  color: #07111f !important;
+  border: 1px solid #8fd3ff !important;
+  font-weight: 700;
+}
+
+.nav-cta.cta-blue:hover {
+  background: #b5e3ff !important;
+  color: #07111f !important;
+  border-color: #b5e3ff !important;
+}
+
+.ticker {
+  background: #8fd3ff !important;
+
+  color: #ffffff !important;
+}
+
+.ticker-track,
+.ticker-item {
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+/* FINAL SERVICES COLOR FIX */
+#services {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+#services .section-heading h2,
+#services .section-heading p,
+#services .service-tab,
+#services .service-tab .service-number,
+#services .service-tab > b,
+#services .service-tab .service-tab-icon,
+#services .service-detail h3,
+#services .service-detail p,
+#services .service-detail .service-points span,
+#services .detail-link {
+  color: #ffffff !important;
+}
+
+#services .service-tab .service-tab-icon {
+  stroke: #ffffff !important;
+}
+
+#services .service-tab {
+  background: transparent !important;
+}
+
+#services .service-tab.active {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+#services .service-tab.active > b,
+#services .service-tab.active .service-number,
+#services .service-tab.active .service-tab-icon {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* Remove blue border from Services buttons */
+#services .service-tab {
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#services .service-tab.active {
+  border: 1px solid #ffffff !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#services .service-tab:focus,
+#services .service-tab:focus-visible {
+  border-color: #ffffff !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Services - increase number & text size */
+#services .service-tab .service-number {
+  font-size: 16px !important;
+}
+
+#services .service-tab > b {
+  font-size: 17px !important;
+}
+
+/* Services - Purple Icons */
+#services .service-tab .service-tab-icon {
+  color: #a855f7 !important;
+  stroke: #a855f7 !important;
+}
+
+#services .service-tab .service-number {
+  color: #8fd3ff !important;
+}
+
+#services .service-tab > b {
+  color: #ffffff !important;
+}
+.section-label span {
+  display: none !important;
+}
+
+/* Architecture Visual - all 4 texts white */
+.arch-visual .visual-top span,
+.arch-visual .visual-bottom span,
+.arch-visual .visual-metrics b,
+.arch-visual .visual-metrics small {
+  color: #ffffff !important;
+  font-weight: 400 !important;
+}
+.arch-visual .visual-top .status-dot {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+/* Technology Lifecycle - Section Numbers */
+.lifecycle .life-step span {
+  color: #E31E24 !important;
+}
+
+/* =========================================
+   WHAT WE BUILD - UNIFORM STYLING
+   ========================================= */
+
+/* Section numbers - RED */
+.solution-card .card-top span {
+  color: #E31E24 !important;
+  font-weight: 600 !important;
+}
+
+/* All six icons - PURPLE */
+.solution-card .card-top svg {
+  color: #A855F7 !important;
+  stroke: #A855F7 !important;
+}
+
+/* All six headings - WHITE */
+.solution-card h3 {
+  color: #FFFFFF !important;
+}
+
+/* All six boxes - SAME GREY BORDER */
+.solution-card {
+  border: 1px solid #6B7280 !important;
+}
+
+/* Remove different colored borders on hover */
+.solution-card:hover {
+  border-color: #6B7280 !important;
+  box-shadow: none !important;
+}
+
+/* =========================================
+   PRODUCTS - FINAL STYLING
+   ========================================= */
+
+/* Product name - LARGE & PROMINENT */
+.product-item h3 {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #111318 !important;
+  margin-bottom: 6px !important;
+}
+
+/* Product description - SMALLER */
+.product-item p {
+  font-size: 10px !important;
+  line-height: 1.6 !important;
+  color: #66717c !important;
+}
+
+/* Product tag - smaller */
+.product-item > div:nth-child(2) > span {
+  font-size: 8px !important;
+}
+
+/* =========================================
+   SELECTED PRODUCT COLORS
+   ========================================= */
+
+/* Nova Insight - BLUE */
+.product-novainsight.selected {
+  border-color: #2563EB !important;
+  box-shadow: inset 3px 0 #2563EB !important;
+}
+
+/* Nova Invent - GREEN */
+.product-noveinvent.selected {
+  border-color: #22C55E !important;
+  box-shadow: inset 3px 0 #22C55E !important;
+}
+
+/* Grid Serve - PURPLE */
+.product-gritzarv.selected {
+  border-color: #A855F7 !important;
+  box-shadow: inset 3px 0 #A855F7 !important;
+}
+
+/* PropGritz - YELLOW */
+.product-propgritz.selected {
+  border-color: #EAB308 !important;
+  box-shadow: inset 3px 0 #EAB308 !important;
+}
+
+/* Remove blue product background */
+.product-item,
+.product-item.selected {
+  background: transparent !important;
+}
+/* Remove blue hover background from products */
+.product-item:hover,
+.product-item:focus,
+.product-item:focus-visible {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* SERVICES - KEEP SAME COLORS ON HOVER */
+
+#services .service-tabs button,
+#services .service-tabs button:hover,
+#services .service-tabs button:focus,
+#services .service-tabs button:focus-visible {
+  color: #ffffff !important;
+  background: transparent !important;
+}
+
+#services .service-tabs button .service-number,
+#services .service-tabs button:hover .service-number,
+#services .service-tabs button:focus .service-number {
+  color: #E31E24 !important;
+}
+
+#services .service-tabs button .service-tab-icon,
+#services .service-tabs button:hover .service-tab-icon,
+#services .service-tabs button:focus .service-tab-icon {
+  color: #A855F7 !important;
+  stroke: #A855F7 !important;
+}
+
+#services .service-tabs button > b,
+#services .service-tabs button:hover > b,
+#services .service-tabs button:focus > b {
+  color: #ffffff !important;
+}
+
+/* Services - Checklist Text Size */
+#services .service-points span {
+  font-size: 10px !important;
+  line-height: 1.5 !important;
+}
+
+#services .service-points span svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* NAVBAR - NO HOVER COLOR CHANGE */
+.nav-links a,
+.nav-links a:hover,
+.nav-links a:focus,
+.nav-links a:focus-visible {
+  color: #ffffff !important;
+}
+
+.nav-links a::after,
+.nav-links a:hover::after {
+  background: #ffffff !important;
+}
+
+.why-grid .why-card > span {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #E31E24 !important;
+  line-height: 1 !important;
+}
+/* =====================================================
+   SECURITY + ABOUT GRITZNOVA FINAL UPDATES
+   ===================================================== */
+
+/* Security Architecture, Authorization, Data Protection etc. */
+.security-grid span {
+  font-size: 12px !important;
+}
+
+/* Engineering Expertise + Business Understanding +
+   AI Innovation + Cloud Technology */
+.formula span {
+  font-size: 10px !important;
+}
+
+/* Increase gap between About heading and paragraph */
+.company-copy h2 {
+  margin-bottom: 30px !important;
+}
+
+/* Keep existing stats 8+ and India unchanged */
+
+/* Third stats labels */
+.stats-grid div:nth-child(3) b {
+  font-size: 10px !important;
+  letter-spacing: .08em !important;
+}
+
+.stats-grid div:nth-child(3) span {
+  font-size: 10px !important;
+}
+
+/* SECURITY - SPACE BETWEEN HEADING & DESCRIPTION */
+.security-copy h2 {
+  margin-bottom: 35px !important;
+}
+
+.security-copy h2 + p {
+  margin-top: 0 !important;
+}
+/* SECURITY GRID - FORCE FONT SIZE */
+.security .security-wrap .security-grid div span {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}
+.stats-grid div:nth-child(3) b {
+  font-size: 34px !important;
+  font-weight: 700 !important;
+}
+
+.stats-grid div:nth-child(3) span {
+  font-size: 8px !important;
+  font-weight: 400 !important;
+}
+
+/* STATS - RED VALUES + WHITE LABELS */
+
+.stats-grid div b {
+  color: #E31E24 !important;
+}
+
+.stats-grid div span {
+  color: #FFFFFF !important;
+}
+
+/* AI.Software */
+.stats-grid div:nth-child(3) b {
+  color: #E31E24 !important;
+}
+
+/* Automation.Cloud */
+.stats-grid div:nth-child(3) span {
+  color: #FFFFFF !important;
+}
+
+/* CONTACT INFO HEADINGS */
+.contact-info > a span small,
+.contact-info > div span small {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #111318 !important;
+  margin-bottom: 5px !important;
+}
+
+/* CONTACT DETAILS - NORMAL & MORE READABLE */
+.contact-info > a > span,
+.contact-info > div > span {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  color: #111318 !important;
+}
+
+/* ENQUIRY FORM - LIGHT BLUE SEND BUTTON */
+.form-submit.cta-blue {
+  background: #8FD3FF !important;
+  color: #07111F !important;
+  border-color: #8FD3FF !important;
+}
+
+.form-submit.cta-blue:hover {
+  background: #8FD3FF !important;
+  color: #07111F !important;
+  border-color: #8FD3FF !important;
+}
+
+/* ENQUIRY FORM - SUCCESS MESSAGE */
+.form-success {
+  text-align: center;
+  padding: 45px 30px !important;
+}
+
+.form-success > div:first-child {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #8FD3FF !important;
+  color: #07111F !important;
+}
+
+.form-success h3 {
+  font-size: 20px !important;
+  line-height: 1.3 !important;
+  margin: 0 0 10px !important;
+  color: #111318 !important;
+}
+
+.form-success p {
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  color: #66717C !important;
+  max-width: 430px;
+  margin: 0 auto 24px !important;
+}
+
+.form-success .btn {
+  font-size: 12px !important;
+}
+
+/* ENQUIRY FORM - CLEAN TYPOGRAPHY */
+.contact-form label {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  font-size: 13px !important;
+}
+
+.contact-form .field-error {
+  font-size: 10px !important;
+  line-height: 1.4 !important;
+  margin-top: 5px !important;
+}
+
+.contact-form .form-submit {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+
+/* FOOTER CONTENT - WHITE */
+.footer,
+.footer h4,
+.footer p,
+.footer a,
+.footer span {
+  color: #ffffff !important;
+}
+
+.footer a:hover {
+  color: #ffffff !important;
+}
+
+.footer-bottom {
+  color: #ffffff !important;
+}
+
+.footer-bottom span {
+  color: #ffffff !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#about {
+  scroll-margin-top: 90px;
+}
+
+/* See how we work - premium black button */
+.intro-side .text-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 11px 18px !important;
+  margin-top: 8px !important;
+
+  background: #08090b !important;
+  color: #ffffff !important;
+  border: 1px solid #252a30 !important;
+  border-radius: 6px !important;
+
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+
+  transition: all 0.25s ease !important;
+}
+
+.intro-side .text-link svg {
+  color: #ffffff !important;
+  transition: transform 0.25s ease !important;
+}
+
+.intro-side .text-link:hover {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-color: #555d66 !important;
+  transform: translateY(-1px) !important;
+}
+
+.intro-side .text-link:hover svg {
+  transform: translateX(3px) !important;
+}
+.architecture-layer:nth-child(2) {
+  transform: translateX(-30px) !important;
+}
+
+
+.product-image-preview {
+  width: 100%;
+  min-height: 430px;
+  overflow: hidden;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  background: #f5f7fa;
+}
+
+.product-image-preview img {
+  width: 100%;
+  height: 430px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.product-image-preview:hover img {
+  transform: scale(1.015);
+}
+
+.product-image-preview {
+  width: 100%;
+  min-height: 430px;
+  overflow: hidden;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  background: #f5f7fa;
+}
+
+
+.product-image-preview:hover img {
+  transform: scale(1.015);
+}
+
+.product-image-preview {
+  width: 100%;
+  min-height: 430px;
+  overflow: hidden;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  background: #f5f7fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image-preview img {
+  width: 100%;
+  height: 430px;
+  display: block;
+  object-fit: contain !important;
+  object-position: center;
 }

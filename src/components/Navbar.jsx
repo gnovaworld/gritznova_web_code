@@ -3,7 +3,7 @@ import { Menu, X, ArrowDownRight } from 'lucide-react';
 import Logo from './Logo';
 
 export default function Navbar({ scrolled, menuOpen, setMenuOpen, onQuote }) {
-  const navItems = ['Solutions', 'Products', 'Services', 'Technology', 'About'];
+  const navItems = ['Solutions', 'Products', 'Services', 'About'];
 
   return (
     <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>

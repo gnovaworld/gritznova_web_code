@@ -4,7 +4,6 @@ import {
   solutions,
   products,
   services,
-  techGroups,
   processSteps,
   industries,
   security
@@ -45,7 +44,6 @@ function Home() {
     company: '',
     phone: '',
     need: '',
-    budget: '',
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
@@ -101,14 +99,24 @@ function Home() {
 
       case 'phone': {
         if (!clean) return '';
+
         if (!/^\+?[0-9()\s.-]+$/.test(clean)) {
-          return 'Please enter a valid phone number.';
+          return 'Please enter a valid mobile number.';
         }
 
         const digits = clean.replace(/\D/g, '');
 
-        if (digits.length < 10 || digits.length > 15) {
-          return 'Phone number must contain 10 to 15 digits.';
+        if (digits.length !== 10 && digits.length !== 12) {
+          return 'Please enter a valid 10-digit mobile number.';
+        }
+
+        const mobileDigits =
+          digits.length === 12 && digits.startsWith('91')
+            ? digits.slice(2)
+            : digits;
+
+        if (!/^[6-9]\d{9}$/.test(mobileDigits)) {
+          return 'Mobile number must start with 6, 7, 8 or 9.';
         }
 
         return '';
@@ -177,7 +185,7 @@ function Home() {
   };
 
   const getSubmissionSignature = () =>
-    ['name', 'email', 'company', 'phone', 'need', 'budget', 'message']
+    ['name', 'email', 'company', 'phone', 'need', 'message']
       .map((field) => normalize(form[field]).toLowerCase())
       .join('|');
 
@@ -188,7 +196,6 @@ function Home() {
       company: '',
       phone: '',
       need: '',
-      budget: '',
       message: ''
     });
 
@@ -294,7 +301,7 @@ function Home() {
 
               <div className="hero-proof">
                 <span>✓ BUILT FOR CHANGE</span>
-                <span>✓ SENIOR ENGINEERING THINKING</span>
+                <span>✓ ENGINEERING THINKING</span>
               </div>
             </div>
 
@@ -566,75 +573,7 @@ function Home() {
           </div>
         </section>
 
-        <section
-          id="technology"
-          className="technology section-light section-padding"
-        >
-          <div className="container">
-            <div className="section-heading reveal">
-              <div>
-                <SectionLabel>ENGINEERING STACK</SectionLabel>
-
-                <h2>
-                  Modern technology.
-                  <br />
-                  Practical engineering.
-                </h2>
-              </div>
-
-              <p>
-                Use proven technologies where they create a measurable
-                advantage — with architecture chosen around the product, team,
-                and operating environment.
-              </p>
-            </div>
-
-            <div className="tech-grid">
-              {techGroups.map(({ icon: Icon, title, items }, i) => {
-                const techClass = `tech-${title
-                  .toLowerCase()
-                  .replace(/[^a-z]+/g, '-')
-                  .replace(/^-|-$/g, '')}`;
-
-                return (
-                  <div
-                    className={`tech-group ${techClass} reveal`}
-                    key={title}
-                  >
-                    <div className="tech-card-head">
-                      <div className="tech-icon-wrap">
-                        <Icon size={20} />
-                      </div>
-
-                      <div className="tech-card-title">
-                        <span className="tech-category">
-                          0{i + 1} / TECHNOLOGY
-                        </span>
-
-                        <h3>{title}</h3>
-                      </div>
-
-                      <span className="tech-count">
-                        {items.length}{' '}
-                        {items.length === 1 ? 'tool' : 'tools'}
-                      </span>
-                    </div>
-
-                    <div
-                      className="tech-badges"
-                      aria-label={`${title} technologies`}
-                    >
-                      {items.map((item) => (
-                        <span key={item}>{item}</span>
-                      ))}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
+      
         <section
           id="about"
           className="why section-dark section-padding"
@@ -872,8 +811,8 @@ ship(system);`}</pre>
             </div>
 
             <div>
-              <b>AI · Cloud</b>
-              <span>Software · Automation</span>
+              <b>AI.Software</b>
+              <span>Automation.Cloud</span>
             </div>
           </div>
         </section>
@@ -984,9 +923,12 @@ ship(system);`}</pre>
                       <Check size={26} />
                     </div>
 
-                    <h3>
-                      Thanks — your enquiry has been submitted successfully.
-                    </h3>
+                    <h3>Enquiry Sent Successfully</h3>
+
+                    <p>
+                      Thank you for contacting GRITZNOVA. Our team will review
+                      your enquiry and get back to you shortly.
+                    </p>
 
                     {errors.form && (
                       <div
@@ -1108,6 +1050,7 @@ ship(system);`}</pre>
                         <input
                           type="tel"
                           inputMode="tel"
+                          maxLength={17}
                           value={form.phone}
                           onChange={(e) =>
                             updateField('phone', e.target.value)
@@ -1163,6 +1106,7 @@ ship(system);`}</pre>
                           <option>Cloud / DevOps</option>
                           <option>Systems integration</option>
                           <option>Managed IT</option>
+                          <option>Others</option>
                         </select>
 
                         {errors.need && (
@@ -1175,26 +1119,7 @@ ship(system);`}</pre>
                         )}
                       </label>
 
-                      <label>
-                        Project Budget
-
-                        <select
-                          value={form.budget}
-                          onChange={(e) =>
-                            updateField('budget', e.target.value)
-                          }
-                        >
-                          <option value="">
-                            Select range
-                          </option>
-
-                          <option>Under ₹5L</option>
-                          <option>₹5L – ₹15L</option>
-                          <option>₹15L – ₹30L</option>
-                          <option>₹30L+</option>
-                          <option>Prefer to discuss</option>
-                        </select>
-                      </label>
+                    
                     </div>
 
                     <label>
