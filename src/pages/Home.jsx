@@ -93,7 +93,7 @@ function Home() {
 
       case 'company':
         if (!clean) return '';
-        if (clean.length < 2) return 'Company name must be at least 2 characters.';
+        if (clean.length < 2) return 'Company name must be at least 3 characters.';
         if (clean.length > 120) return 'Company name must be 120 characters or less.';
         return '';
 
