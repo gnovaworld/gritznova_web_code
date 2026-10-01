@@ -177,9 +177,8 @@ export default function Footer() {
 
 
           <span>
-            © 2026 GRITZNOVA. All rights reserved.
-          </span>
-
+  <span className="copyright-symbol">©</span> 2026 GRITZNOVA. All rights reserved.
+</span>
           <span>
             Software · AI · Cloud · Engineering
           </span>

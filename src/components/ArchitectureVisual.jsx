@@ -58,10 +58,11 @@ export default function ArchitectureVisual() {
             key={n.label}
             transform={`translate(${n.x},${n.y})`}
           >
-        <rect
+                <rect
   width={n.label === 'INTELLIGENCE' ? '145' : '120'}
   height={n.label === 'INTELLIGENCE' ? '72' : '62'}
-  rx="4"
+  rx="10"
+  ry="10"
   className="node-box"
 />
 
@@ -112,7 +113,7 @@ export default function ArchitectureVisual() {
           textAnchor="middle"
           className="core-g"
         >
-          G
+          GN
         </text>
 
         <text
@@ -121,7 +122,7 @@ export default function ArchitectureVisual() {
           textAnchor="middle"
           className="core-text"
         >
-          GRITZNOVA
+          AI Solutions
         </text>
       </svg>
 

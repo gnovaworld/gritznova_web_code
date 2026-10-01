@@ -542,10 +542,20 @@ function Home() {
                       {s.number}
                     </span>
 
-                    <s.icon
-                      className="service-tab-icon"
-                      size={18}
-                    />
+       <span
+  className="service-tab-icon"
+  style={{
+    color: '#ffffff',
+    display: 'inline-flex',
+    flexShrink: 0
+  }}
+>
+  <s.icon
+    size={18}
+    color="#ffffff"
+    stroke="#ffffff"
+  />
+</span>
 
                     <b>{s.title}</b>
                   </button>
