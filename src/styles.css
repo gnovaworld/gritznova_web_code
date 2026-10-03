@@ -2878,7 +2878,54 @@ button,
     width: 155px !important;
   }
 }
+/* =========================
+   FINAL MOBILE NAVBAR LOGO
+   ========================= */
 
+@media (max-width: 768px) {
+
+  .navbar {
+    height: 68px !important;
+    overflow: hidden !important;
+  }
+
+  .nav-inner {
+    height: 68px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .navbar .brand,
+  .navbar .brand-compact {
+    width: 115px !important;
+    height: 68px !important;
+    max-width: 115px !important;
+    display: flex !important;
+    align-items: center !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .navbar .brand img,
+  .navbar .brand-compact img {
+    width: 115px !important;
+    max-width: 115px !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
+
+  .menu-toggle {
+    flex-shrink: 0 !important;
+  }
+}
 /* Service Detail Box - Rounded Corners */
 .service-detail {
   border-radius: 10px !important;
@@ -2941,4 +2988,55 @@ button,
   fill: #fff !important;
   font-size: 5px !important;
   font-weight: 500 !important;
+}
+
+@media (max-width: 768px) {
+  .navbar .brand {
+    display: flex !important;
+    align-items: center !important;
+    width: auto !important;
+    max-width: 140px !important;
+    overflow: visible !important;
+    flex-shrink: 0 !important;
+  }
+
+  .navbar .brand img,
+  .navbar .brand-compact img {
+    width: 125px !important;
+    max-width: 125px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .brand {
+    width: 120px !important;
+    max-width: 120px !important;
+    height: 55px !important;
+  }
+
+  .navbar .brand img,
+  .navbar .brand-compact img {
+    width: 120px !important;
+    max-width: 120px !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  .nav-inner {
+    height: 58px !important;
+    align-items: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .brand img,
+  .navbar .brand-compact img {
+    height: 45px !important;
+    max-height: 45px !important;
+    width: auto !important;
+    max-width: 90px !important;
+  }
 }
